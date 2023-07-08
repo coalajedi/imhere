@@ -6,8 +6,19 @@
  * is strictly prohibited.
  */
 
-import Home from './src/screens/Home';
+import {Home} from './src/screens/Home';
+import {Fragment} from 'react';
+import {StatusBar} from 'react-native';
 
 export default function App() {
-  return <Home />;
+  return (
+    <Fragment>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent={true}
+      />
+      <Home />
+    </Fragment>
+  );
 }
